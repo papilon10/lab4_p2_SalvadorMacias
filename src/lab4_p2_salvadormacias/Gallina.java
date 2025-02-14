@@ -56,7 +56,19 @@ public class Gallina extends Animal {
 
     @Override
     public void recolectarProductos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        if (produccionHuevos < 10) {
+            System.out.println("no se produjeron huevos");
+
+        } else if (produccionHuevos >= 10 && produccionHuevos <= 49) {
+            System.out.println("se produjo 1 huevo");
+
+        } else if (produccionHuevos >= 50 && produccionHuevos <= 74) {
+            System.out.println("se produjeron 3 huevos");
+
+        } else if (produccionHuevos >= 75 && produccionHuevos <= 100) {
+            System.out.println("se produjeron 5 huevos");
+
+        }
     }
 
     @Override

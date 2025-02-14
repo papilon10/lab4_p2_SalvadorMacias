@@ -56,7 +56,17 @@ public class Cerdo extends Animal {
 
     @Override
     public void recolectarProductos() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+
+        if (capacidadBusqueda <= 10) {
+            System.out.println("no se encontraron trufas");
+        } else if (capacidadBusqueda >= 10 && capacidadBusqueda <= 49) {
+            System.out.println("se encontro una trufa");
+        } else if (capacidadBusqueda >= 50 && capacidadBusqueda <= 74) {
+            System.out.println("se encontro una trufa");
+        } else if (capacidadBusqueda >= 75 && capacidadBusqueda <= 100) {
+            System.out.println("se encontro una trufa");
+
+        }
     }
 
     @Override
