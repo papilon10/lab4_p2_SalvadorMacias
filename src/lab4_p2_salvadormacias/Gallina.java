@@ -8,6 +8,61 @@ package lab4_p2_salvadormacias;
  *
  * @author Apple
  */
-public class Gallina {
-    
+public class Gallina extends Animal {
+
+    public int produccionHuevos;
+    public String color;
+
+    public Gallina() {
+    }
+
+    public Gallina(int produccionHuevos, String color, String nombre, double precio) {
+        super(nombre, precio);
+        this.produccionHuevos = produccionHuevos;
+        this.color = color;
+    }
+
+    public int getProduccionHuevos() {
+        return produccionHuevos;
+    }
+
+    public void setProduccionHuevos(int produccionHuevos) {
+        this.produccionHuevos = produccionHuevos;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    @Override
+    public void recolectarProductos() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()
+                + "Gallina{" + "produccionHuevos=" + produccionHuevos + ", color=" + color + '}';
+    }
+
 }
