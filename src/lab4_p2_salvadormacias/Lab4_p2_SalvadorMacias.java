@@ -17,6 +17,7 @@ public class Lab4_p2_SalvadorMacias {
     public static Scanner str = new Scanner(System.in);
 
     public static ArrayList lista = new ArrayList();
+    public static double dinero = 2000.00;
 
     /**
      * @param args the command line arguments
@@ -55,16 +56,31 @@ public class Lab4_p2_SalvadorMacias {
 
                 break;
                 case 6: {
+                    salida = true;
                 }
 
                 break;
                 default:
-                    throw new AssertionError();
+                    System.out.println("opcion ingresada es invalida...");
             }//fin switch
 
         } while (salida
                 != true);//fin while
 
     }//fin main
+
+    public static void registrarAnimal() {
+
+    }
+
+    public static void listarAnimales() {
+    }
+    
+    public static void comprarAnimal(){
+    }
+    
+    public static void listarGranja(){}
+    
+    public static void recoleccion(){}
 
 }//fin clase
