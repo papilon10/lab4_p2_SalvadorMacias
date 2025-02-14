@@ -17,6 +17,8 @@ public class Lab4_p2_SalvadorMacias {
     public static Scanner str = new Scanner(System.in);
 
     public static ArrayList lista = new ArrayList();
+    public static ArrayList listaGranja = new ArrayList();
+
     public static double dinero = 2000.00;
 
     /**
@@ -70,17 +72,71 @@ public class Lab4_p2_SalvadorMacias {
     }//fin main
 
     public static void registrarAnimal() {
+        System.out.println("---\nRegistrar animal---");
+        System.out.println("1.Cerdo");
+        System.out.println("2.Gallina");
+        System.out.println("3.Vaca");
+        System.out.println("ingrese opcion: ");
+        int opc_registrar = lea.nextInt();
+        switch (opc_registrar) {
+            case 1: {
+                System.out.println("Ingrese el nombre: ");
+                String nombre = str.nextLine();
+                System.out.println("Ingrese el precio: ");
+                Double precio = lea.nextDouble();
+                System.out.println("Ingrese la capacidad de busqueda: ");
+                int capacidadBusqueda = lea.nextInt();
+                System.out.println("Ingrese la resistencia: ");
+                int resitencia = lea.nextInt();
+                lista.add(new Cerdo(capacidadBusqueda, resitencia, nombre, precio));
 
-    }
+            }
+
+            break;
+
+            case 2: {
+                System.out.println("Ingrese el nombre: ");
+                String nombre = str.nextLine();
+                System.out.println("Ingrese el precio: ");
+                Double precio = lea.nextDouble();
+                System.out.println("Ingrese la produccion de huevos: ");
+                int produccionHuevos = lea.nextInt();
+                System.out.println("Ingrese el color del plumaje: ");
+                String color = str.nextLine();
+                lista.add(new Gallina(produccionHuevos, color, nombre, precio));
+            }
+
+            break;
+            case 3: {
+                System.out.println("Ingrese el nombre: ");
+                String nombre = str.nextLine();
+                System.out.println("Ingrese el precio: ");
+                Double precio = lea.nextDouble();
+                System.out.println("Ingrese la produccion de leche: ");
+                int produccionLeche = lea.nextInt();
+                System.out.println("Ingrese el temperamento de la vaca: ");
+                String temperamento = str.nextLine();
+                lista.add(new Gallina(produccionLeche, nombre, nombre, precio));
+
+            }
+
+            break;
+            default:
+                System.out.println("la opcion ingresada es invalida");
+        }
+
+    }// fin registrar animal
 
     public static void listarAnimales() {
     }
-    
-    public static void comprarAnimal(){
+
+    public static void comprarAnimal() {
     }
-    
-    public static void listarGranja(){}
-    
-    public static void recoleccion(){}
+
+    public static void listarGranja() {
+    }
+
+    public static void recoleccion() {
+    }
 
 }//fin clase
