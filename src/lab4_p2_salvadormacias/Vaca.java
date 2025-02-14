@@ -61,7 +61,9 @@ public class Vaca extends Animal {
 
     @Override
     public String toString() {
-        return super.toString()+ "Vaca{" + "produccionLeche=" + produccionLeche + ", temperamento=" + temperamento + '}';
+        return "tipo de animal : vaca\n"
+                + super.toString()
+                + "\nproduccion de leche: " + produccionLeche + "\ntemperamento de la vaca: " + temperamento;
     }
 
 }

@@ -61,8 +61,9 @@ public class Gallina extends Animal {
 
     @Override
     public String toString() {
-        return super.toString()
-                + "Gallina{" + "produccionHuevos=" + produccionHuevos + ", color=" + color + '}';
+        return "tipo de animal : gallina\n"
+                + super.toString()
+                + "\nproduccion de huevos: " + produccionHuevos + "\nColor de plumaje : " + color;
     }
 
 }

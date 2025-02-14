@@ -41,7 +41,8 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return "Animal{" + "nombre=" + nombre + ", precio=" + precio + '}';
+        return "nombre: "+ nombre + "\nprecio: " + precio;
+                
     }
 
 }

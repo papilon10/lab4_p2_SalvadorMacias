@@ -61,7 +61,9 @@ public class Cerdo extends Animal {
 
     @Override
     public String toString() {
-        return super.toString() + "Cerdo{" + "capacidadBusqueda=" + capacidadBusqueda + ", resitencia=" + resitencia + '}';
+        return "tipo de animal : cerdo\n"
+                + super.toString()
+                + "\ncapacidad de busqueda: " + capacidadBusqueda + "\nresistencia: " + resitencia;
     }
 
 }

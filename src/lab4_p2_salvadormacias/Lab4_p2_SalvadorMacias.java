@@ -38,10 +38,13 @@ public class Lab4_p2_SalvadorMacias {
             int opc_menu = lea.nextInt();
             switch (opc_menu) {
                 case 1: {
+                    registrarAnimal();
                 }
 
                 break;
                 case 2: {
+                    listarAnimales();
+
                 }
 
                 break;
@@ -72,7 +75,7 @@ public class Lab4_p2_SalvadorMacias {
     }//fin main
 
     public static void registrarAnimal() {
-        System.out.println("---\nRegistrar animal---");
+        System.out.println("\n---Registrar animal---");
         System.out.println("1.Cerdo");
         System.out.println("2.Gallina");
         System.out.println("3.Vaca");
@@ -89,6 +92,7 @@ public class Lab4_p2_SalvadorMacias {
                 System.out.println("Ingrese la resistencia: ");
                 int resitencia = lea.nextInt();
                 lista.add(new Cerdo(capacidadBusqueda, resitencia, nombre, precio));
+                System.out.println("el cerdo fue agregado a la lista de animales\n");
 
             }
 
@@ -104,6 +108,7 @@ public class Lab4_p2_SalvadorMacias {
                 System.out.println("Ingrese el color del plumaje: ");
                 String color = str.nextLine();
                 lista.add(new Gallina(produccionHuevos, color, nombre, precio));
+                System.out.println("la gallina fue agregada a la lista de animales\n");
             }
 
             break;
@@ -117,17 +122,26 @@ public class Lab4_p2_SalvadorMacias {
                 System.out.println("Ingrese el temperamento de la vaca: ");
                 String temperamento = str.nextLine();
                 lista.add(new Gallina(produccionLeche, nombre, nombre, precio));
+                System.out.println("la vaca fue agregada a la lista de animales\n");
 
             }
 
             break;
             default:
-                System.out.println("la opcion ingresada es invalida");
+                System.out.println("la opcion ingresada es invalida\n");
         }
 
     }// fin registrar animal
 
     public static void listarAnimales() {
+        System.out.println("---Base de datos de animales---");
+        for (int i = 0; i < lista.size(); i++) {
+            System.out.println("Indice en base de datos : " + i);
+            System.out.println(lista.get(i));
+            System.out.println("\n");
+
+        }
+
     }
 
     public static void comprarAnimal() {
