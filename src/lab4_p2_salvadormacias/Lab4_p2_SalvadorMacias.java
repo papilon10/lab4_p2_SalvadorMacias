@@ -16,10 +16,10 @@ public class Lab4_p2_SalvadorMacias {
     public static Scanner lea = new Scanner(System.in);
     public static Scanner str = new Scanner(System.in);
 
-    public static ArrayList lista = new ArrayList();
+    public static ArrayList<Animal> lista = new ArrayList();
     public static ArrayList listaGranja = new ArrayList();
 
-    public static double dinero = 2000.00;
+    public static double dinero = 5000.00;
 
     /**
      * @param args the command line arguments
@@ -49,10 +49,12 @@ public class Lab4_p2_SalvadorMacias {
 
                 break;
                 case 3: {
+                    comprarAnimal();
                 }
 
                 break;
                 case 4: {
+                    listarGranja();
                 }
 
                 break;
@@ -145,9 +147,27 @@ public class Lab4_p2_SalvadorMacias {
     }
 
     public static void comprarAnimal() {
+        listarAnimales();
+        System.out.println("Ingrese el indice del animal que desea comprar: ");
+        int indiceCompra = lea.nextInt();
+        if (dinero > lista.get(indiceCompra).getPrecio()) {
+            listaGranja.add(lista.get(indiceCompra));
+            System.out.println("se agrego el animal a la granja\n");
+        } else {
+            System.out.println("el dinero no es suficiente para comprar el animal");
+        }
+
     }
 
     public static void listarGranja() {
+        System.out.println("---Animales en granja---");
+        for (int i = 0; i < listaGranja.size(); i++) {
+            System.out.println("Indice en base de datos : " + i);
+            System.out.println(listaGranja.get(i));
+            System.out.println("\n");
+
+        }
+
     }
 
     public static void recoleccion() {
